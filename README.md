@@ -47,23 +47,11 @@ The first three letters of the plaintext are represented by the vector (15 0 24)
 
 Decryption requires using the inverse of the matrix K. We can compute det K = 23, and therefore, (det K)-1mod 26 = 17. We can then compute the inverse as
 
-4
+4    9  15
 
-9
+15  17  6
 
-15
-
-15
-
-17
-
-6
-
-24
-
-0
-
-17
+24   0  17
 
 This is demonstrated as
 
