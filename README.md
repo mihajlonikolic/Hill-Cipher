@@ -86,8 +86,4 @@ so
 ![]( static/8.jpg)
 
 This result is verified by testing the remaining plaintext–ciphertext pairs.  
-<<<<<<< HEAD
 Now you can use this scenario to practice all three functionalities.
-=======
-Now you can use this scenario to practice all three functionalities.
->>>>>>> b630a026053ba00387ecdb55a9c16ecacf25bc97
