@@ -1,16 +1,15 @@
 <h3>Introduction</h3>
-<p><a href="http://{{ vm_ip('main') }}:8000/">Go to VM</a></p>
 <p>
 	This scenario should provide students with an insight into substitution ciphers and remind them of some basic mathematical operations used in cryptography.
 </p>
 
 <p>
-	The scenario is a Windows Forma Application which enables the encoding and decoding of text by using Hill's Cipher. This is a cipher that belongs to the group of substitution ciphers. Hill Cipher is characterized by the fact that substitution is performed by executing mathematical operations over matrices that represent an inevitable segment of cryptography.The general equation of Hill's Cipher is given below:
+	The scenario is a Windows Forma Application which enables the encoding and decoding of text by using Hill's Cipher. This is a cipher that belongs to the group of substitution ciphers. Hill Cipher is characterized by the fact that substitution is performed by executing mathematical operations over matrices that represent an inevitable segment of cryptography. The general equation of Hill's Cipher is given below:
 </p>
 
 <figure>
-    <img src=" static/4.jpg" height="100%" alt="Coding by Hill's Cipher">  
-    <figcaption>SSH Transport Layer Protocol Packet Formation <sup><a href="#fn1" id="ref1">1</a></sup> </figcaption>
+    <img src=" static/4.jpg" height="20%" alt="Equation of Hill's Cipher">  
+    <figcaption>Equation of Hill's Cipher<sup><a href="#fn1" id="ref1">1</a></sup> </figcaption>
 </figure>
   <ul>
     <li> <b> C </b> - row vector of length 3 representing the ciphertext </li>
@@ -20,17 +19,85 @@
   </ul>
 
 <p>
-
+	All operations in this scenario are executed by mod 30 (26 letters of alphabet + 4 special characters '.' ',' '!' '?'). For coding and deconding you can use this charachters, otherwise the program will report an error.	Below you can find examples of encoding, decoding and breaking up of the code of Hill's Cipher. 
 </p>
 
-<figure>
-  	<img src=" static/CBC.jpg" alt="Cipher Block Chaining (CBC) mode encryption">
-  	<figcaption>Cipher Block Chaining (CBC) mode encryption <sup><a href="#fn2" id="ref2">2</a></sup> </figcaption>
-</figure>
-
+<h3> Examples </h3>
+Consider the plaintext “paymoremoney” and use the encryption key
+    <table class="matrix">
+        <tr>
+            <td>17 </td>
+            <td>17 </td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>21 </td>
+            <td>18 </td>
+            <td>21</td>
+        </tr>
+        <tr>
+            <td>2 </td>
+            <td>2 </td>
+            <td>19</td>
+        </tr>
+    </table>
+<h4> Encoding </h4>
 <p>
-    The student can see how the implementation of the CBC mode should look in practice, which helps him to understand how this type of encoding actually works.
+    The first three letters of the plaintext are represented by the vector (15 0 24). Then (15 0 24)K = (303 303 531) mod 26 = (17 17 11) = RRL. Continuing in this fashion, the ciphertext for the entire plaintext is RRLMWBKASPDH.
 </p>
 
-<sup id="fn1">1. [Protocol Basics: Secure Shell Protocol - The Internet Protocol Journal, Volume 12, No.4 by William Stallings]<a href="#ref1" title="">↩</a></sup> <br>
-<sup id="fn2">2. <a href="https://de.wikipedia.org/wiki/Datei:CBC_decryption.svg">[https://de.wikipedia.org/wiki/Datei:CBC_decryption.svg]</a><a href="#ref2" title="">↩</a></sup>
+<h4> Decoding </h4>
+<p>
+    Decryption requires using the inverse of the matrix K. We can compute det K = 23, and therefore, (det K)-1mod 26 = 17. We can then compute the inverse as
+
+    <table class="matrix">
+        <tr>
+            <td>4 </td>
+            <td>9 </td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td>15 </td>
+            <td>17 </td>
+            <td> 6</td>
+        </tr>
+        <tr>
+            <td>24 </td>
+            <td>0 </td>
+            <td>17</td>
+        </tr>
+    </table>
+
+This is demonstrated as
+<figure>
+    <img src=" static/5.jpg" height="10%">  
+    <figcaption></figcaption>
+</figure>
+It is easily seen that if the inverse matrix K is applied to the ciphertext, then the
+plaintext is recovered.
+</p>
+
+<h4> Breaking up of the code </h4>
+<p>
+Suppose that the plaintext “hillcipher” is encrypted
+using 2 x 2 a Hill cipher to yield the ciphertext HCRZSSXNSP.Thus, we know that
+(7 8)K mod 26 = (7 2); (11 11)K mod 26 = (17 25); and so on. Using the first two
+plaintext–ciphertext pairs, we have
+<figure>
+    <img src=" static/6.jpg" height="8%">  
+    <figcaption></figcaption>
+</figure>
+The inverse of X can be computed:
+<figure>
+    <img src=" static/7.jpg" height="10%">  
+    <figcaption></figcaption>
+</figure>
+so
+<figure>
+    <img src=" static/8.jpg" height="10%">  
+    <figcaption></figcaption>
+</figure>
+This result is verified by testing the remaining plaintext–ciphertext pairs.
+<br>
+Now you can use this scenario to practice all three functionalities.
+</p>
