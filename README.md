@@ -6,7 +6,7 @@ This scenario should provide students with an insight into substitution ciphers 
 
 The scenario is a Windows Forma Application which enables the encoding and decoding of text by using Hill's Cipher. This is a cipher that belongs to the group of substitution ciphers. Hill Cipher is characterized by the fact that substitution is performed by executing mathematical operations over matrices that represent an inevitable segment of cryptography. The general equation of Hill's Cipher is given below:
 
-![Equation of Hill's Cipher]( static/Four.jpg)
+![Equation of Hill's Cipher]( static/Four.JPG)
 
 Equation of Hill's Cipher[1](#fn1)
 
