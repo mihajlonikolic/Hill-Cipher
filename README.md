@@ -1,4 +1,4 @@
-# Hill-Cypher
+# Hill-Cipher
 
 ### Introduction
 
