@@ -1,0 +1,36 @@
+<h3>Introduction</h3>
+<p><a href="http://{{ vm_ip('main') }}:8000/">Go to VM</a></p>
+<p>
+	This scenario should provide students with an insight into substitution ciphers and remind them of some basic mathematical operations used in cryptography.
+</p>
+
+<p>
+	The scenario is a Windows Forma Application which enables the encoding and decoding of text by using Hill's Cipher. This is a cipher that belongs to the group of substitution ciphers. Hill Cipher is characterized by the fact that substitution is performed by executing mathematical operations over matrices that represent an inevitable segment of cryptography.The general equation of Hill's Cipher is given below:
+</p>
+
+<figure>
+    <img src=" static/4.jpg" height="100%" alt="Coding by Hill's Cipher">  
+    <figcaption>SSH Transport Layer Protocol Packet Formation <sup><a href="#fn1" id="ref1">1</a></sup> </figcaption>
+</figure>
+  <ul>
+    <li> <b> C </b> - row vector of length 3 representing the ciphertext </li>
+    <li> <b> P </b> - row vector of length 3 representing the plaintext </li>
+    <li> <b> K </b> - 3 x 3 matrix representing the encryption key </li>
+    <li> <b> mod 26 </b> - operations are performed by mod 26 (the alphabet has 26 letters)
+  </ul>
+
+<p>
+
+</p>
+
+<figure>
+  	<img src=" static/CBC.jpg" alt="Cipher Block Chaining (CBC) mode encryption">
+  	<figcaption>Cipher Block Chaining (CBC) mode encryption <sup><a href="#fn2" id="ref2">2</a></sup> </figcaption>
+</figure>
+
+<p>
+    The student can see how the implementation of the CBC mode should look in practice, which helps him to understand how this type of encoding actually works.
+</p>
+
+<sup id="fn1">1. [Protocol Basics: Secure Shell Protocol - The Internet Protocol Journal, Volume 12, No.4 by William Stallings]<a href="#ref1" title="">↩</a></sup> <br>
+<sup id="fn2">2. <a href="https://de.wikipedia.org/wiki/Datei:CBC_decryption.svg">[https://de.wikipedia.org/wiki/Datei:CBC_decryption.svg]</a><a href="#ref2" title="">↩</a></sup>
