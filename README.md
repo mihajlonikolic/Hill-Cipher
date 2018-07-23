@@ -6,7 +6,7 @@ This scenario should provide students with an insight into substitution ciphers 
 
 The scenario is a Windows Forma Application which enables the encoding and decoding of text by using Hill's Cipher. This is a cipher that belongs to the group of substitution ciphers. Hill Cipher is characterized by the fact that substitution is performed by executing mathematical operations over matrices that represent an inevitable segment of cryptography. The general equation of Hill's Cipher is given below:
 
-![Equation of Hill's Cipher]( static/4.jpg)
+![Equation of Hill's Cipher]( static/Four.jpg)
 
 Equation of Hill's Cipher[1](#fn1)
 
@@ -21,23 +21,11 @@ All operations in this scenario are executed by mod 30 (26 letters of alphabet +
 
 Consider the plaintext “paymoremoney” and use the encryption key
 
-17
+17  17  5
 
-17
+21  18  21
 
-5
-
-21
-
-18
-
-21
-
-2
-
-2
-
-19
+2   2   19
 
 #### Encoding
 
@@ -47,27 +35,15 @@ The first three letters of the plaintext are represented by the vector (15 0 24)
 
 Decryption requires using the inverse of the matrix K. We can compute det K = 23, and therefore, (det K)-1mod 26 = 17. We can then compute the inverse as
 
-4
+4   9   15
 
-9
+15  17  6
 
-15
-
-15
-
-17
-
-6
-
-24
-
-0
-
-17
+24  0   17
 
 This is demonstrated as
 
-![]( static/5.jpg)
+![.]( static/5.jpg)
 
 It is easily seen that if the inverse matrix K is applied to the ciphertext, then the plaintext is recovered.
 
@@ -75,19 +51,15 @@ It is easily seen that if the inverse matrix K is applied to the ciphertext, the
 
 Suppose that the plaintext “hillcipher” is encrypted using 2 x 2 a Hill cipher to yield the ciphertext HCRZSSXNSP.Thus, we know that (7 8)K mod 26 = (7 2); (11 11)K mod 26 = (17 25); and so on. Using the first two plaintext–ciphertext pairs, we have
 
-![]( static/6.jpg)
+![.]( static/6.jpg)
 
 The inverse of X can be computed:
 
-![]( static/7.jpg)
+![.]( static/7.jpg)
 
 so
 
-![]( static/8.jpg)
+![.]( static/8.jpg)
 
 This result is verified by testing the remaining plaintext–ciphertext pairs.  
-<<<<<<< HEAD
 Now you can use this scenario to practice all three functionalities.
-=======
-Now you can use this scenario to practice all three functionalities.
->>>>>>> b630a026053ba00387ecdb55a9c16ecacf25bc97
