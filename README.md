@@ -43,7 +43,7 @@ Decryption requires using the inverse of the matrix K. We can compute det K = 23
 
 This is demonstrated as
 
-![]( static/5.jpg)
+![.]( static/5.jpg)
 
 It is easily seen that if the inverse matrix K is applied to the ciphertext, then the plaintext is recovered.
 
@@ -51,15 +51,15 @@ It is easily seen that if the inverse matrix K is applied to the ciphertext, the
 
 Suppose that the plaintext “hillcipher” is encrypted using 2 x 2 a Hill cipher to yield the ciphertext HCRZSSXNSP.Thus, we know that (7 8)K mod 26 = (7 2); (11 11)K mod 26 = (17 25); and so on. Using the first two plaintext–ciphertext pairs, we have
 
-![]( static/6.jpg)
+![.]( static/6.jpg)
 
 The inverse of X can be computed:
 
-![]( static/7.jpg)
+![.]( static/7.jpg)
 
 so
 
-![]( static/8.jpg)
+![.]( static/8.jpg)
 
 This result is verified by testing the remaining plaintext–ciphertext pairs.  
 Now you can use this scenario to practice all three functionalities.
