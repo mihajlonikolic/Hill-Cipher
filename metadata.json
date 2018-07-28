@@ -1,11 +1,10 @@
 {
-  "title": "Hill Cipher",
+  "title": "Hill-Cipher",
   "is_challenge": false,
   "show_ethics_reminder": false,
   "required_components": [],
   "static": {
     "css": [],
     "js": []
-  },
-  "vm_resource": "Hill_Cipher"
+  }
 }
